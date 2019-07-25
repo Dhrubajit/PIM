@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=D\:\\Personal\\germany\\.git;
-GitRepositoriesView.GitDirectories.relative=D\:\\Personal\\germany\\.git;
+GitRepositoriesView.GitDirectories=D\:\\Personal\\Work\\WS\\PIM\\.git;D\:\\Personal\\germany\\.git;
+GitRepositoriesView.GitDirectories.relative=.git;D\:\\Personal\\germany\\.git;
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
