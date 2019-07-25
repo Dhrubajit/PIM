@@ -1,0 +1,11 @@
+package com.main.java.proxy;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@FeignClient(name="Aggregator")
+public interface AggregatorProxyService {
+
+	@RequestMapping("/nonProducts")
+	String getMessage();
+}

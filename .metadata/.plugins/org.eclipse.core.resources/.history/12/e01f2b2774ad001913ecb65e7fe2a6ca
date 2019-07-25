@@ -1,0 +1,5 @@
+package com.mkyong.utility;
+
+public class CSVToBean {
+
+}

@@ -1,0 +1,22 @@
+package com.main.java.modelObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class productList {
+	
+	private List<Product> productList;
+	 
+    public productList() {
+    	productList = new ArrayList<>();
+    }
+
+	public List<Product> getProductList() {
+		return productList;
+	}
+
+	public void setProductList(List<Product> productList) {
+		this.productList = productList;
+	}
+
+}

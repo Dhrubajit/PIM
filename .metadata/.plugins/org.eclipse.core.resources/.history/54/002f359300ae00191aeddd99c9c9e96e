@@ -1,0 +1,6 @@
+package com.main.java.proxy;
+
+@FeignClient(name="microB")
+public interface AggregatorProxyService {
+
+}

@@ -1,0 +1,25 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+
+
+@RestController
+public class AggregatorController {
+	
+
+	/*
+	 * @PostMapping("/Products") Product newProduct(@RequestBody Product newProduct)
+	 * { return productRepository.save(newProduct); }
+	 */
+	@GetMapping("/nonProducts")
+	String nonProduct(@RequestBody List<Product> listProduct) {
+		// return productRepository.save(s);
+
+		return "redirect:/uploadStatus";
+	}
+}

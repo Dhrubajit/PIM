@@ -1,0 +1,52 @@
+package com.mkyong.utility;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.mkyong.modelObject.Product;
+import com.opencsv.CSVReader;
+import com.opencsv.bean.CsvToBean;
+import com.opencsv.bean.HeaderColumnNameTranslateMappingStrategy;
+
+public class CSVToBean {
+
+	Map<String, String> hMap = new HashMap<String, String>();
+	
+	hMap.put("name","Name");
+	mapping.put("rollno","RollNo");
+	mapping.put("department","Department");
+	mapping.put("result","Result");
+	mapping.put("cgpa","Pointer");
+
+// HeaderColumnNameTranslateMappingStrategy 
+// for Product class 
+	HeaderColumnNameTranslateMappingStrategy<Product> strategy = new HeaderColumnNameTranslateMappingStrategy<Product>();
+	strategy.setType(Product.class);
+	strategy.setColumnMapping(mapping);
+
+// Create castobaen and csvreader object 
+CSVReader csvReader = null;try
+	{
+		csvReader = new CSVReader(new FileReader("D:\\EclipseWorkSpace\\CSVOperations\\ProductData.csv"));
+	}catch(
+	FileNotFoundException e)
+	{
+
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	CsvToBean csvToBean = new CsvToBean();
+
+// call the parse method of CsvToBean 
+// pass strategy, csvReader to parse method 
+	List<Product> list = csvToBean.parse(strategy, csvReader);
+
+// print details of Bean object 
+	for(Product product:list)
+	{
+		System.out.println(product);
+	}
+}

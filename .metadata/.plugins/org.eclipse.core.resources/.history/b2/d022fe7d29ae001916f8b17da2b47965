@@ -1,0 +1,27 @@
+package com.example.demo.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.entity.Product;
+import com.example.demo.repository.ProductRepository;
+
+@RestController
+public class AggregatorController {
+	
+	ProductRepository productRepository;
+
+	@PostMapping("/Products")
+	Product newProduct(@RequestBody Product newProduct) {
+		return productRepository.save(newProduct);
+	}
+
+	@PostMapping("/nonProducts")
+	String nonProduct(@RequestBody String s) {
+		// return productRepository.save(s);
+
+		return s + "  Hi.....!!!!!!!!";
+	}
+}

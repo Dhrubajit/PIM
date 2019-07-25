@@ -1,0 +1,10 @@
+package com.main.java.proxy;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(name="Aggregator")
+public interface AggregatorProxyService {
+
+	@RequestMapping("/myMessageB")
+	String getMessage();
+}

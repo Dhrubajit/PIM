@@ -1,0 +1,6 @@
+package com.main.java.proxy;
+
+@FeignClient(name="Aggregator")
+public interface AggregatorProxyService {
+
+}
